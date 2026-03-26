@@ -66,7 +66,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Join Me 💜</h1>
+    <h1>Join us 💜</h1>
     <form action="https://formspree.io/f/YOUR_ID" method="POST">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email" required>
