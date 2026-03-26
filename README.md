@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Contact Me</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     * {
       margin: 0;
@@ -12,7 +11,6 @@
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
     }
-
     body {
       height: 100vh;
       display: flex;
@@ -20,7 +18,6 @@
       align-items: center;
       background: linear-gradient(135deg, #4facfe, #a18cd1);
     }
-
     .container {
       background: rgba(255, 255, 255, 0.15);
       padding: 40px;
@@ -30,12 +27,10 @@
       text-align: center;
       width: 300px;
     }
-
     h1 {
       color: white;
       margin-bottom: 20px;
     }
-
     input {
       width: 100%;
       padding: 12px;
@@ -44,11 +39,9 @@
       border-radius: 10px;
       outline: none;
     }
-
     input::placeholder {
       color: #777;
     }
-
     button {
       width: 100%;
       padding: 12px;
@@ -60,12 +53,10 @@
       cursor: pointer;
       transition: 0.3s;
     }
-
     button:hover {
       transform: scale(1.05);
       opacity: 0.9;
     }
-
     .footer {
       margin-top: 15px;
       font-size: 12px;
@@ -73,9 +64,7 @@
     }
   </style>
 </head>
-
 <body>
-
   <div class="container">
     <h1>Join Me 💜</h1>
     <form action="https://formspree.io/f/YOUR_ID" method="POST">
@@ -87,6 +76,5 @@
       Made with 💙
     </div>
   </div>
-
 </body>
 </html>
