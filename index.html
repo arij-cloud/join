@@ -1,80 +1,154 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Me</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+<meta charset="UTF-8">
+<title>For Mariem 💖</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #ffe6f0, #ffb6d9);
+    font-family: 'Comic Sans MS', cursive;
+    overflow: hidden;
+}
+
+/* CENTER BOX */
+.container {
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 2s ease;
+}
+
+/* HEART */
+.heart {
+    width: 120px;
+    height: 120px;
+    background: #ff66a3;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    animation: beat 1s infinite;
+    box-shadow: 0 0 30px #ff99cc;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: #ff66a3;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -60px;
+    left: 0;
+}
+
+.heart::after {
+    left: 60px;
+    top: 0;
+}
+
+/* TEXT */
+h1 {
+    margin-top: 30px;
+    color: #ff3385;
+    font-size: 2.3em;
+    text-shadow: 0 0 10px white, 0 0 20px #ff99cc;
+}
+
+p {
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* FLOATING HEARTS */
+.floating-heart {
+    position: absolute;
+    color: #ff80bf;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+/* SPARKLES */
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkle 2s infinite ease-in-out;
+}
+
+/* ANIMATIONS */
+@keyframes beat {
+    0%,100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
     }
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #4facfe, #a18cd1);
+    50% {
+        opacity: 1;
     }
-    .container {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 40px;
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      text-align: center;
-      width: 300px;
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
     }
-    h1 {
-      color: white;
-      margin-bottom: 20px;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 10px;
-      outline: none;
-    }
-    input::placeholder {
-      color: #777;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-    .footer {
-      margin-top: 15px;
-      font-size: 12px;
-      color: #eee;
-    }
-  </style>
+}
+
+@keyframes sparkle {
+    0%,100% { opacity: 0; transform: scale(1); }
+    50% { opacity: 1; transform: scale(2); }
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Join us 💜</h1>
-    <form action="https://formspree.io/f/mdapgwgl" method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <button type="submit">Send ✨</button>
-    </form>
-    <div class="footer">
-      Made with 💙
-    </div>
-  </div>
+
+<div class="container">
+    <div class="heart"></div>
+    <h1>I love u bestie Mariem 💖</h1>
+    <p>You make everything brighter ✨</p>
+</div>
+
+<!-- Floating hearts -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let heart = document.createElement("div");
+    heart.className = "floating-heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    document.body.appendChild(heart);
+}
+
+/* Sparkles */
+for (let i = 0; i < 30; i++) {
+    let s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.top = Math.random() * 100 + "vh";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.animationDelay = Math.random() * 2 + "s";
+    document.body.appendChild(s);
+}
+</script>
+
 </body>
 </html>
